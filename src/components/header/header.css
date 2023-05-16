@@ -56,7 +56,12 @@ header {
       300px circle at 120px 200px,
       transparent 30%,
       rgba(16, 16, 16, 0.92)
-    ), */ url(../../assets/me-bewerbung.png);
+    ), */ linear-gradient(
+      var(--color-bg) 2%,
+      transparent 35%,
+      var(--color-bg)
+    ),
+    url(../../assets/me-bewerbung.png);
   mix-blend-mode: lighten;
   /* background-blend-mode: multiply; */
   background-size: contain;
