@@ -57,12 +57,11 @@ header {
       transparent 30%,
       rgba(16, 16, 16, 0.92)
     ), */ linear-gradient(
-      var(--color-bg) 2%,
-      transparent 35%,
+      transparent 5%,
       var(--color-bg)
     ),
     url(../../assets/me-bewerbung.png);
-  mix-blend-mode: lighten;
+  /* mix-blend-mode: lighten; */
   /* background-blend-mode: multiply; */
   background-size: contain;
   background-repeat: no-repeat;
