@@ -81,7 +81,7 @@ const About = () => {
               {/* </div> */}
             </article>
           </div>
-          <div className="text-sm">
+          <div className="text-sm tracking-wide mt-10">
             <p> Hello together,</p>
             <p>
               I am happy you found the way to my personal website! So let me
@@ -115,13 +115,23 @@ const About = () => {
                   the full potential of these technologies and deliver great
                   value to our society!
                 </p>
-                <div className="about__read-more">
-                  <a onClick={() => setViewMore(false)}>Read Less</a>
+                <div className="text-center mt-5">
+                  <a
+                    onClick={() => setViewMore(false)}
+                    className="text-[var(--color-secondary)]"
+                  >
+                    Read Less
+                  </a>
                 </div>
               </span>
             ) : (
-              <div className="about__read-more">
-                <a onClick={() => setViewMore(true)}>Read More</a>
+              <div className="text-center mt-5">
+                <a
+                  onClick={() => setViewMore(true)}
+                  className="text-[var(--color-secondary)]"
+                >
+                  Read More
+                </a>
               </div>
             )}
           </div>

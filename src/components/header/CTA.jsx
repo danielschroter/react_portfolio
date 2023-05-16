@@ -12,15 +12,12 @@ const CTA = () => {
       >
         Download CV
       </a>
-      {/* <a href="#contact" className="btn btn-primary">
-        Let's Talk
-      </a> */}
-      <button
+      <a
         href="#contact"
         className="border border-cyan-400/60 text-gray-300 px-3 shadow-lg py-2 text-sm rounded-lg hover:bg-gray-800/20 hover:border-gray-100  transition"
       >
         Let's Talk
-      </button>
+      </a>
     </div>
   );
 };
