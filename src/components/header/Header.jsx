@@ -7,7 +7,7 @@ import HeaderSocials from "./HeaderSocials";
 
 const Header = () => {
   return (
-    <header>
+    <div>
       <div className="container header__container">
         <h5 className="p-2">Hello I'm</h5>
         <h1 className=" pb-4 text-4xl md:text-4xl tracking-widest font-thin ">
@@ -29,7 +29,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
