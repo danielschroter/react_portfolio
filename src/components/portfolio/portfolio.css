@@ -31,10 +31,10 @@
   width: 100%;
 } */
 
-/* .portfolio__item:hover {
+.portfolio__item:hover {
   background: transparent;
   border-color: var(--color-primary-variant);
-} */
+}
 
 .portfolio__item-image-div {
   border-radius: 1.5rem;

@@ -116,22 +116,22 @@ const About = () => {
                   value to our society!
                 </p>
                 <div className="text-center mt-5">
-                  <a
+                  <button
                     onClick={() => setViewMore(false)}
                     className="text-[var(--color-secondary)]"
                   >
                     Read Less
-                  </a>
+                  </button>
                 </div>
               </span>
             ) : (
               <div className="text-center mt-5">
-                <a
+                <button
                   onClick={() => setViewMore(true)}
                   className="text-[var(--color-secondary)]"
                 >
                   Read More
-                </a>
+                </button>
               </div>
             )}
           </div>
