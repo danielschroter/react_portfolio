@@ -14,7 +14,7 @@ const CTA = () => {
       </a>
       <a
         href="#contact"
-        className="border border-cyan-400/60 text-gray-300 px-3 shadow-lg py-2 text-sm rounded-lg hover:bg-gray-800/20 hover:border-gray-100  transition"
+        className="border relative border-cyan-400/60 text-gray-300 px-3 shadow-lg py-2 text-sm rounded-lg hover:bg-gray-800/20 hover:border-gray-100 hover:cursor-pointer transition"
       >
         Let's Talk
       </a>

@@ -39,7 +39,7 @@ const Footer = () => {
 
       <div className="footer__copyright">
         <small>
-          &copy; Credits to EGATOR Tutorials. All rights reserverd. See{" "}
+          Credits to EGATOR Tutorials. See{" "}
           <a href="https://www.youtube.com/watch?v=G-Cr00UYokU" target="_blank">
             source
           </a>

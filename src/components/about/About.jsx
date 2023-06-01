@@ -82,21 +82,27 @@ const About = () => {
             </article>
           </div>
           <div className="text-sm tracking-wide mt-10">
-            <p> Hello together,</p>
             <p>
-              I am happy you found the way to my personal website! So let me
-              briefly introduce myself... I would consider myself as an
-              entrepreneurial thinking computer scientist with a strong
+              I am an entrepreneurial thinking computer scientist with a strong
               background in business administration.
             </p>
 
-            <span className="about__span">
+            <p>
+              AI can deliver great value. Especially in the areas of Natural
+              Language Processing and Augmented Reality. Nevertheless it is
+              crucial to connect with customers & users to meet their demands.
+              By making black models explainable (explainableAI) we will be able
+              to exploit the full potential of these technologies and deliver
+              great value to our society!
+            </p>
+
+            {/* <span className="about__span">
               For years I have been interested in the development of artificial
               intelligence. I started to study management and technology to gain
               a feeling for the value-creating potential that modern
               technologies can deliver. &nbsp;
-            </span>
-            {viewMore ? (
+            </span> */}
+            {/* {viewMore ? (
               <span>
                 <span className="about__span">
                   Diving deeper into that topic I felt the desire of not only
@@ -106,15 +112,7 @@ const About = () => {
                   Informatics with a focus on Artificial Intelligence, Machine
                   Learning and Natural Language Processing.
                 </span>
-                <p>
-                  Personally, I think that AI can deliver great value.
-                  Especially in the areas of Natural Language Processing and
-                  Augmented Reality. Nevertheless it is crucial to connect with
-                  customers & users to meet their demands. By making black
-                  models explainable (explainableAI) we will be able to exploit
-                  the full potential of these technologies and deliver great
-                  value to our society!
-                </p>
+                
                 <div className="text-center mt-5">
                   <button
                     onClick={() => setViewMore(false)}
@@ -133,7 +131,7 @@ const About = () => {
                   Read More
                 </button>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>

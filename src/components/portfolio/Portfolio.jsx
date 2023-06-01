@@ -19,6 +19,8 @@ import Rasa from "./RASA";
 import SoNLP from "./SO_NLP";
 import ExpAI from "./Exp_AI";
 import Projecthr21 from "./ProjectHr21";
+import AiOnePager from "./AiOnePager";
+import HumValue from "./HumValue";
 
 const data = [
   {
@@ -26,9 +28,11 @@ const data = [
     image: AiOnePagerImg,
     title: "AI One Pager",
     github: "https://github.com/danielschroter/skillExtractor",
-    demo: "https://aionpager.schroter.eu/",
-    subheading: "AI analyzes your skillset and writes an One Pager",
-    subtitle: "AI analyzes your skillset and writes an One Pager",
+    demo: "https://aionepager.schroter.eu/",
+    subheading:
+      "AI analyzes your skillset and writes an One Pager selling you as the expert that you are!",
+    subtitle:
+      "AI analyzes your skillset and writes an One Pager selling you as the expert that you are!",
     keywords: [
       "Competence Extraction",
       "Skills Database",
@@ -305,7 +309,7 @@ const Portfolio = () => {
                       onClick={() => toggleTab(0)}
                     />
                     <h2 className="portfolio__modal-title">{title}</h2>
-                    <div className="text-center">{subheading}</div>
+                    <div className="text-center mb-10">{subheading}</div>
                     {id === 1 ? (
                       <BaBwl git={github} words={keywords} />
                     ) : id === 2 ? (
@@ -318,6 +322,10 @@ const Portfolio = () => {
                       <ExpAI words={keywords} git={github} />
                     ) : id === 6 ? (
                       <Projecthr21 words={keywords} git={github} />
+                    ) : id === 7 ? (
+                      <AiOnePager words={keywords} git={github}></AiOnePager>
+                    ) : id === 8 ? (
+                      <HumValue words={keywords} git={github}></HumValue>
                     ) : null}
                   </div>
                 </div>

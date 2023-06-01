@@ -1,6 +1,6 @@
 .experience__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 60% 1fr;
   gap: 2rem;
 }
 
@@ -25,9 +25,10 @@
   color: var(--color-primary);
 }
 .experience__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .experience__details {
