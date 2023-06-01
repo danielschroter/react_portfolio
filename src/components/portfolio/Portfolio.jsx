@@ -6,6 +6,8 @@ import IMG3 from "../../assets/chatbot.jpg";
 import IMG4 from "../../assets/technology.jpg";
 import IMG5 from "../../assets/ai_cropped.jpg";
 import IMG6 from "../../assets/collaboration.jpg";
+import AiOnePagerImg from "../../assets/AiOnePager.png";
+import HumanValuesImg from "../../assets/Human_Values_Newspaper.png";
 
 import { AiOutlineClose } from "react-icons/ai";
 import { useParams } from "react-router-dom";
@@ -19,6 +21,51 @@ import ExpAI from "./Exp_AI";
 import Projecthr21 from "./ProjectHr21";
 
 const data = [
+  {
+    id: 7,
+    image: AiOnePagerImg,
+    title: "AI One Pager",
+    github: "https://github.com/danielschroter/skillExtractor",
+    demo: "https://aionpager.schroter.eu/",
+    subheading: "AI analyzes your skillset and writes an One Pager",
+    subtitle: "AI analyzes your skillset and writes an One Pager",
+    keywords: [
+      "Competence Extraction",
+      "Skills Database",
+      "Natural Language Processing",
+      "Large Language Models",
+      "OpenAI GPT",
+      "Serverless",
+      "Vercel",
+      "Google Cloud Platform",
+      "Microservices",
+      "AWS S3",
+    ],
+  },
+  {
+    id: 8,
+    image: HumanValuesImg,
+    title: "Human Value Detector",
+    github: "https://github.com/danielschroter/human_value_detector",
+    demo: "https://human-value-app.vercel.app/",
+    subheading:
+      "Competition winning system that discovers human values in arguments in an explainable way",
+    subtitle:
+      "Competition winning system that discovers human values in arguments in an explainable way",
+    keywords: [
+      "Transformer",
+      "RoBERTa | DeBERTa",
+      "T5",
+      "ExplainableAI",
+      "Lime | Loco",
+      "Ensemble Models",
+      "Plausibility",
+      "Faithfulness",
+      "Python",
+      "Pytorch Lightning",
+      "Neptune.ai",
+    ],
+  },
   {
     id: 6,
     image: IMG6,
@@ -132,7 +179,7 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Predictive Maintenance @ a production line",
+    title: "Predictive Maintenance @ Bosch production line",
     github: "https://github.com/danielschroter/predictive_main_bosch",
     subheading:
       "Bachelor Thesis: Applying machine learning algorithms for predictive maintenance in a production line.",
@@ -149,51 +196,6 @@ const data = [
       "random forest",
       "xgBoost",
       "cost sensitive learning",
-    ],
-  },
-  {
-    id: 7,
-    image: IMG1,
-    title: "AI One Pager",
-    github: "https://github.com/danielschroter/skillExtractor",
-    demo: "https://skill-extractor.vercel.app/",
-    subheading: "AI analyzes your skillset and writes an appropriate One Pager",
-    subtitle: "AI analyzes your skillset and writes an appropriate One Pager",
-    keywords: [
-      "Competence Extraction",
-      "Skills Database",
-      "Natural Language Processing",
-      "Large Language Models",
-      "OpenAI GPT",
-      "Serverless",
-      "Vercel",
-      "Google Cloud Platform",
-      "Microservices",
-      "AWS S3",
-    ],
-  },
-  {
-    id: 7,
-    image: IMG1,
-    title: "Human Value Detector",
-    github: "https://github.com/danielschroter/human_value_detector",
-    demo: "https://human-value-app.vercel.app/",
-    subheading:
-      "Competition winning system that discovers human values in arguments in an explainable way",
-    subtitle:
-      "Competition winning system that discovers human values in arguments in an explainable way",
-    keywords: [
-      "Transformer",
-      "RoBERTa | DeBERTa",
-      "T5",
-      "ExplainableAI",
-      "Lime | Loco",
-      "Ensemble Models",
-      "Plausibility",
-      "Faithfulness",
-      "Python",
-      "Pytorch Lightning",
-      "Neptune.ai",
     ],
   },
 ];

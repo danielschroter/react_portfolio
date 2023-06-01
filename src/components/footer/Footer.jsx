@@ -32,9 +32,6 @@ const Footer = () => {
         <a href="https://github.com/danielschroter">
           <FaGithub />
         </a>
-        <a href="https://www.instagram.com/daniel.schroter/">
-          <FiInstagram />
-        </a>
         <a href="https://www.linkedin.com/in/daniel-schroter/">
           <BsLinkedin />
         </a>
