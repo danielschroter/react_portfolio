@@ -27,7 +27,7 @@ const data = [
     id: 7,
     image: AiOnePagerImg,
     title: "AI One Pager",
-    github: "https://github.com/danielschroter/skillExtractor",
+    github: "",
     demo: "https://aionepager.schroter.eu/",
     subheading:
       "AI analyzes your skillset and writes an One Pager selling you as the expert that you are!",
@@ -51,7 +51,7 @@ const data = [
     image: HumanValuesImg,
     title: "Human Value Detector",
     github: "https://github.com/danielschroter/human_value_detector",
-    demo: "https://human-value-app.vercel.app/",
+    demo: "https://value-detector.schroter.eu/",
     subheading:
       "Competition winning system that discovers human values in arguments in an explainable way",
     subtitle:
@@ -74,7 +74,7 @@ const data = [
     id: 6,
     image: IMG6,
     title: "ProjectHR21 ",
-    github: "https://github.com/danielschroter",
+    github: "",
     subtitle: "NLP-Web-Application to transform the way we work together",
     demo: "",
 
@@ -143,7 +143,7 @@ const data = [
     id: 3,
     image: IMG3,
     title: "Builduing a chatbot with RASA",
-    github: "#",
+    github: "",
     more: "#",
     demo: "",
 
@@ -281,11 +281,11 @@ const Portfolio = () => {
                         Demo
                       </a>
                     ) : null}
-                    {id === 3 ? null : (
+                    {github.length > 0 ? (
                       <a href={github} className="btn" target="_blank">
                         Github
                       </a>
-                    )}
+                    ) : null}
                     <a
                       className="btn btn-primary"
                       onClick={() => toggleTab(id)}

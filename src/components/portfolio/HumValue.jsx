@@ -13,7 +13,7 @@ function HumValue(props) {
       </div>
       <div className="porfolio__modal-btn btn-expai">
         <a
-          href="https://human-value-app.vercel.app/"
+          href="https://value-detector.schroter.eu/"
           download
           className="btn btn-primary"
         >
