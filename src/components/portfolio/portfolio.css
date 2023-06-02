@@ -84,7 +84,8 @@
   margin-bottom: auto;
   align-items: center;
   border-radius: 1.5rem;
-  color: var(--color-white);
+  /* color: var(--color-white); */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .portfolio__modal-close {
@@ -129,12 +130,15 @@
   margin-top: 3.5rem;
   margin-bottom: 0.8rem;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   font-size: large;
 }
 
 .portfolio__modal-para p {
   /* text-align: center; */
+  letter-spacing: 0.07em;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .portfolio__modal h2 {

@@ -1,14 +1,22 @@
 import React from "react";
 import Keywords from "./Keywords";
-import Paper from "../../assets/key-point-analysis-and-explanations-for-quantitative-text-analysis.pdf";
+import Paper from "../../assets/HumEvalSchroter.pdf";
 import Slides from "../../assets/Final_presentation.pdf";
 import { IoIosRocket } from "react-icons/io";
+import { FaAward } from "react-icons/fa";
 
 function HumValue(props) {
   return (
     <div>
+      <div className="flex flex-row items-center justify-center">
+        <FaAward className="about__icon text-3xl" />
+      </div>
       <div className="porfolio__modal-btn btn-expai">
-        <a href={Paper} download className="btn btn-primary">
+        <a
+          href="https://human-value-app.vercel.app/"
+          download
+          className="btn btn-primary"
+        >
           Demo
         </a>
         <a href={Paper} download className="btn btn-tertiary">
@@ -26,7 +34,7 @@ function HumValue(props) {
       <div className="portfolio__modal-para">
         <h3 className="portfolio__modal-heading">Goal:</h3>
         <p>
-          We should ban whaling, whaling is wiping out species for little in
+          "We should ban whaling, whaling is wiping out species for little in
           return." say some, "We shouldn’t, it is part of a great number of
           cultures." say others. Both arguments support their claim, but why are
           some arguments more convincing to us than others? This might relate to
@@ -41,13 +49,16 @@ function HumValue(props) {
         <article className="portfolio__modal-details">
           <IoIosRocket className="portfolio__modal-details-icon" />
           <div>
-            <h4>Competition Winning System in SemEval 2023 workshop.</h4>
+            <h4>
+              Competition Winning System in SemEval 2023 workshop (alias Adam
+              Smith).
+            </h4>
           </div>
         </article>
         <article className="portfolio__modal-details">
           <IoIosRocket className="portfolio__modal-details-icon" />
           <div>
-            <h4>Beating baseline by 33%</h4>
+            <h4>F1 Score of 0.56. Beating the baseline by 33%</h4>
           </div>
         </article>
 
@@ -55,9 +66,16 @@ function HumValue(props) {
           <IoIosRocket className="portfolio__modal-details-icon" />
           <div>
             <h4>
-              LIME capturing inner working of model and delivering human
+              LIME captures inner working of model and delivering human
               understandable explanations
             </h4>
+          </div>
+        </article>
+
+        <article className="portfolio__modal-details">
+          <IoIosRocket className="portfolio__modal-details-icon" />
+          <div>
+            <h4>LIME shows higher plausibility and faithfulness than LOCO</h4>
           </div>
         </article>
       </div>
@@ -65,85 +83,54 @@ function HumValue(props) {
       <div className="portfolio__modal-para">
         <h3 className="portfolio__modal-heading">Example:</h3>
 
-        <p>
-          We modified LIME to work with Siamese Neural Networks. Thereby we get
-          an understanding why the model makes certain decisions.
-          <br />
-          Let's have a look at an example:
-        </p>
         <p style={{ "margin-top": "1rem" }}>
-          <b>The Argument:</b> The United States{" "}
+          <b>The Argument: </b>
+          "We should{" "}
           <span style={{ "background-color": "rgba(229, 143, 0, 0.2)" }}>
-            is
+            ban
           </span>{" "}
-          undoubtedly the{" "}
           <span style={{ "background-color": "rgba(229, 143, 0, 0.35)" }}>
-            richest
+            whaling
           </span>
-          <span style={{ "background-color": "rgba(229, 143, 0, 0.2)" }}>
-            {" "}
-            country
-          </span>{" "}
-          that exists, its{" "}
+          ,{" "}
+          <span style={{ "background-color": "rgba(229, 143, 0, 0.35)" }}>
+            whaling{" "}
+          </span>
+          is{" "}
           <span style={{ "background-color": "rgba(229, 143, 0, 0.7)" }}>
-            income
+            wiping{" "}
           </span>
           <span style={{ "background-color": "rgba(229, 143, 0, 0.2)" }}>
-            {" "}
-            is{" "}
+            out{" "}
           </span>
-          really{" "}
-          <span style={{ "background-color": "rgba(229, 143, 0, 0.3)" }}>
-            high{" "}
-          </span>
-          and{" "}
-          <span style={{ "background-color": "rgba(229, 143, 0, 0.3)" }}>
-            higher
-          </span>{" "}
-          than that of any other{" "}
-          <span style={{ "background-color": "rgba(229, 143, 0, 0.3)" }}>
-            country
-          </span>
-          , apart from being one of the{" "}
-          <span style={{ "background-color": "rgba(229, 143, 0, 0.2)" }}>
-            main
-          </span>{" "}
           <span style={{ "background-color": "rgba(229, 143, 0, 0.7)" }}>
-            {" "}
-            productive
+            species{" "}
           </span>
-          <span style={{ "background-color": "rgba(229, 143, 0, 0.2)" }}>
-            {" "}
-            countries{" "}
-          </span>
-          on the{" "}
-          <span style={{ "background-color": "rgba(61,149,187,0.43)" }}>
-            planet
-          </span>
-          .
+          for little in return."
         </p>
         <p style={{ "margin-top": "1rem" }}>
-          <b>Key-Point:</b> The US has a good economy/high standard of living.
+          <b>Human Value: </b> Universalsim nature (confidence: 0.92)
         </p>
 
         <p style={{ "margin-top": "1rem" }}>
-          <b>Prediction probabilities:</b>{" "}
+          <b>Explanations:</b> Top{" "}
           <span style={{ color: "rgba(229, 143, 0, 0.8)" }}>
-            <b>Similar</b>
+            <b> 3</b>
           </span>{" "}
-          0.78 ,{" "}
-          <span style={{ color: "rgba(61,149,187, 0.8)" }}>
-            <b>Dissimilar</b>
+          most important terms make up
+          <span style={{ color: "rgba(229, 143, 0, 0.8)" }}>
+            <b> 0.78 </b>
           </span>{" "}
-          0.22.
+          of the models confidence
         </p>
 
         <p style={{ "margin-top": "1rem" }}>
-          <b>Explanation:</b> The words in orange contribute to a high
-          similarity score, whereas the blue words work against a matching. Even
-          though the words "income" and "productive country" are not part of the
-          key-point, the model has learned that they represent concepts of a
-          "good economoy" and a "high standard of living".
+          <b>Explanation:</b> The words in orange contribute to a confidence
+          score, We can see how the considers the words "ban", "whaling",
+          "wiping out" as important for the predicition "protecting the
+          environent" (univesalism nature). We can capture the importance of the
+          explanations with the concept of faithfulness. Faithfulness indicates
+          how well the explanation captures the inner working of the model.
         </p>
       </div>
 

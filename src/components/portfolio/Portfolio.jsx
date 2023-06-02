@@ -275,7 +275,7 @@ const Portfolio = () => {
                     {demo.length > 0 ? (
                       <a
                         href={demo}
-                        className="btn bg-[var(--color-primary)]"
+                        className="btn btn-secondary"
                         target="_blank"
                       >
                         Demo
@@ -309,7 +309,9 @@ const Portfolio = () => {
                       onClick={() => toggleTab(0)}
                     />
                     <h2 className="portfolio__modal-title">{title}</h2>
-                    <div className="text-center mb-10">{subheading}</div>
+                    <div className="text-center mb-10 text-lg">
+                      {subheading}
+                    </div>
                     {id === 1 ? (
                       <BaBwl git={github} words={keywords} />
                     ) : id === 2 ? (
