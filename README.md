@@ -1,7 +1,7 @@
 
 # Portfolio Website!
 
-URL: daniel.schroter.eu
+URL: https://daniel.schroter.eu
 
 
 For this portfolio website I followed the following tutorial: https://www.youtube.com/watch?v=G-Cr00UYokU
