@@ -88,7 +88,7 @@ function Projecthr21(props) {
         </div>
       </div>
 
-      <div className="portfolio__modal-para">
+      <div className="portfolio__modal-para ">
         <h3 className="portfolio__modal-heading">Solution:</h3>
 
         <p>
