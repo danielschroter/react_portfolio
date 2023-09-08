@@ -82,19 +82,19 @@ const About = () => {
             </article>
           </div>
           <div className="text-sm tracking-wide mt-10">
-            <p>
+            <div>
               I am an entrepreneurial thinking computer scientist with a strong
               background in business administration.
-            </p>
+            </div>
 
-            <p>
+            <div className="mt-4">
               AI can deliver great value. Especially in the areas of Natural
               Language Processing and Augmented Reality. Nevertheless it is
               crucial to connect with customers & users to meet their demands.
               By making black models explainable (explainableAI) we will be able
               to exploit the full potential of these technologies and deliver
               great value to our society!
-            </p>
+            </div>
 
             {/* <span className="about__span">
               For years I have been interested in the development of artificial
