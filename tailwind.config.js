@@ -3,6 +3,15 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        primary: "var(--color-primary)",
+        background: "var(--color-bg)",
+        backgroundVariant: "var(--color-bg-variant)",
+        primaryVariant: "var(--color-primary-variant)",
+        secondary: "var(--color-secondary)",
+        secondaryVariant: "var(--color-secondary-variant)",
+        light: "var(--color-light)",
+      },
       animation: {
         blob: "blob 7s infinite",
       },
