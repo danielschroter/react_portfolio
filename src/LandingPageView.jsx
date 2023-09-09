@@ -24,7 +24,7 @@ function LandingPageView() {
         <Header />
         <Nav />
         <About />
-        <Services></Services>
+        {/* <Services></Services> */}
         <Experience />
         <Portfolio />
         <Contact />
