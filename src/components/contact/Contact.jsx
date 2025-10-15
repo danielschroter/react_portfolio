@@ -15,7 +15,11 @@ const Contact = () => {
             <MdOutlineMail className="contact__option-icon" />
             <h4>Email</h4>
             <h5>daniel@schroter.biz</h5>
-            <a href="mailto:daniel@schroter.biz" target="_blank">
+            <a
+              href="mailto:daniel@schroter.biz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Send a message
             </a>
           </article>
@@ -26,6 +30,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/daniel-schroter/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Send a message
             </a>

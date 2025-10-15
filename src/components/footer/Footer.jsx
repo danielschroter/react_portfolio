@@ -1,18 +1,17 @@
 import React from "react";
 import "./footer.css";
 import { FaGithub } from "react-icons/fa";
-import { FiInstagram } from "react-icons/fi";
 import { BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <footer>
-      <a href="#" className="text-4xl tracking-widest font-thin m-10">
+      <a href="/#" className="text-4xl tracking-widest font-thin m-10">
         Daniel Schroter
       </a>
       <ul className="permalinks">
         <li>
-          <a href="#">Home</a>
+          <a href="/#">Home</a>
         </li>
         <li>
           <a href="#about">About</a>
@@ -40,7 +39,11 @@ const Footer = () => {
       <div className="footer__copyright">
         <small>
           Credits to EGATOR Tutorials. See{" "}
-          <a href="https://www.youtube.com/watch?v=G-Cr00UYokU" target="_blank">
+          <a
+            href="https://www.youtube.com/watch?v=G-Cr00UYokU"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             source
           </a>
         </small>

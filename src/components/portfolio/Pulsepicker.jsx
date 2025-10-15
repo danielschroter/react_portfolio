@@ -7,6 +7,7 @@ function PulsePicker(props) {
         <a
           href="https://pulsepicker.schroter.eu"
           target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-primary"
         >
           Try it yourself!

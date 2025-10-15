@@ -1,7 +1,6 @@
 import React from "react";
 import Keywords from "./Keywords";
 import Paper from "../../assets/HumEvalSchroter.pdf";
-import Slides from "../../assets/Final_presentation.pdf";
 import { IoIosRocket } from "react-icons/io";
 import { FaAward } from "react-icons/fa";
 
@@ -22,7 +21,12 @@ function HumValue(props) {
         <a href={Paper} download className="btn btn-tertiary">
           Download Paper
         </a>
-        <a href={props.git} className="btn btn-secondary" target="_blank">
+        <a
+          href={props.git}
+          className="btn btn-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Github
         </a>
       </div>

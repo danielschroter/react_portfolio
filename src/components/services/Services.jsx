@@ -1,8 +1,5 @@
 import React from "react";
 import "./services.css";
-import { GrTarget } from "react-icons/gr";
-import { FiUser } from "react-icons/fi";
-import { CgProfile } from "react-icons/cg";
 import { FiTarget } from "react-icons/fi";
 
 const Services = () => {

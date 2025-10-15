@@ -1,5 +1,4 @@
 import React from "react";
-import { BsPatchCheckFill } from "react-icons/bs";
 
 function Keywords(props) {
   return (

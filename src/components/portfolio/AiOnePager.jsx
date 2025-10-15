@@ -9,11 +9,17 @@ function AiOnePager(props) {
         <a
           href="https://aionepager.schroter.eu"
           target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-primary"
         >
           Demo
         </a>
-        <a href={props.git} className="btn btn-secondary" target="_blank">
+        <a
+          href={props.git}
+          className="btn btn-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Github
         </a>
       </div>
@@ -67,6 +73,7 @@ function AiOnePager(props) {
         <a
           href="https://aionepager.schroter.eu"
           target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-primary "
         >
           Try it yourself!
