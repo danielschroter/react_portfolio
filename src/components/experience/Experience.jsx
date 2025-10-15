@@ -1,35 +1,35 @@
 import React from "react";
 import "./experience.css";
 
-import { BsPatchCheckFill } from "react-icons/bs";
-
 const Experience = () => {
   const mlSkills = [
     "Python",
     "Pytorch",
-    "R",
+    "Natural Language Processing",
+    "Generative AI",
+    "RAG",
+    "PEFT Fine-Tuning",
+    "Prompt Engineering",
     "Deep Learning",
     "Machine Learning",
     "Transformer",
     "Explainable AI",
-    "Natural Language Processing",
   ];
   const managementSkills = [
     "Business Development",
+    "Entrepreneurship",
     "Pitching & Presentations",
     "Management Science",
     "Operations Research",
     "Agile Software Development",
-    "Human Resource Management",
   ];
   const webDev = [
     "React",
     "Next JS",
     "TailwindCss",
-    "MERN",
     "Docker",
+    "Azure",
     "GCP",
-    "AWS S3",
     "Microservice",
   ];
 

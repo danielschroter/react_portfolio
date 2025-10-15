@@ -1,28 +1,72 @@
 import React, { useState } from "react";
-import "./portfolio.css";
-import IMG1 from "../../assets/production.jpg";
-import IMG2 from "../../assets/intelligent agent.jpg";
-import IMG3 from "../../assets/chatbot.jpg";
-import IMG4 from "../../assets/technology.jpg";
 import IMG5 from "../../assets/ai_cropped.jpg";
-import IMG6 from "../../assets/collaboration.jpg";
 import AiOnePagerImg from "../../assets/AiOnePager.png";
+import IMG3 from "../../assets/chatbot.jpg";
+import IMG6 from "../../assets/collaboration.jpg";
 import HumanValuesImg from "../../assets/Human_Values_Newspaper.png";
+import IMG2 from "../../assets/intelligent agent.jpg";
+import IMG_PULSE from "../../assets/owl.webp";
+import IMG1 from "../../assets/production.jpg";
+import IMG_PROMPTIC from "../../assets/promptic.png";
+import IMG4 from "../../assets/technology.jpg";
+import "./portfolio.css";
 
+import { useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 
+import AiOnePager from "./AiOnePager";
 import BaBwl from "./BA_BWL";
 import BaCS from "./BA_CS";
+import ExpAI from "./Exp_AI";
+import HumValue from "./HumValue";
+import Projecthr21 from "./ProjectHr21";
+import Promptic from "./Promptic";
+import PulsePicker from "./Pulsepicker";
 import Rasa from "./RASA";
 import SoNLP from "./SO_NLP";
-import ExpAI from "./Exp_AI";
-import Projecthr21 from "./ProjectHr21";
-import AiOnePager from "./AiOnePager";
-import HumValue from "./HumValue";
-
 const data = [
+  {
+    id: 10,
+    image: IMG_PROMPTIC,
+    title: "Promptic",
+    github: "",
+    subheading: "One-click prompt optimization for LLMs.",
+    subtitle:
+      "Simple, powerful, and analytics-driven prompt optimization based on your individual business metrics.",
+    demo: "https://promptic.eu/",
+    keywords: [
+      "Prompt Engineering",
+      "LLMs",
+      "Generative AI",
+      "Prompt Optimization",
+      "Metric-driven optimization",
+    ],
+  },
+  {
+    id: 9,
+    image: IMG_PULSE,
+    title: "PulsePicker",
+    github: "",
+    subheading:
+      "Research Agent: A research agent that helps you stay up-to-date with the latest research in your field.",
+    subtitle:
+      "AI Agents search arXiv and send you summaries about the latest research in your field.",
+    demo: "https://pulsepicker.schroter.eu",
+    keywords: [
+      "Agents",
+      "Generative AI",
+      "arXiv",
+      "OpenAI",
+      "Azure",
+      "Python",
+      "FastAPI",
+      "Next.js",
+      "TailwindCSS",
+      "PostgreSQL",
+      "Vercel",
+    ],
+  },
   {
     id: 7,
     image: AiOnePagerImg,
@@ -51,7 +95,7 @@ const data = [
     image: HumanValuesImg,
     title: "Human Value Detector",
     github: "https://github.com/danielschroter/human_value_detector",
-    demo: "https://value-detector.schroter.eu/",
+    demo: "",
     subheading:
       "Competition winning system that discovers human values in arguments in an explainable way",
     subtitle:
@@ -236,11 +280,17 @@ const Portfolio = () => {
         case "reinforcement":
           setToggleState(2);
           break;
+        case "pulsepicker":
+          setToggleState(9);
+          break;
+        case "promptic":
+          setToggleState(10);
+          break;
         default:
           setToggleState(0);
       }
     }
-  });
+  }, [id, initialLoad]);
 
   return (
     <section id="portfolio">
@@ -277,23 +327,27 @@ const Portfolio = () => {
                         href={demo}
                         className="btn btn-secondary"
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Demo
                       </a>
                     ) : null}
                     {github.length > 0 ? (
-                      <a href={github} className="btn" target="_blank">
+                      <a
+                        href={github}
+                        className="btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Github
                       </a>
                     ) : null}
-                    <a
+                    <button
                       className="btn btn-primary"
                       onClick={() => toggleTab(id)}
                     >
                       Read More
-                    </a>
-                    {/*{id === 6 ? <a href="https://projecthr-21.herokuapp.com/" target="_blank" */}
-                    {/*               className='btn btn-primary'>Demo</a> : null}*/}
+                    </button>
                   </div>
                 </div>
                 <div
@@ -328,6 +382,10 @@ const Portfolio = () => {
                       <AiOnePager words={keywords} git={github}></AiOnePager>
                     ) : id === 8 ? (
                       <HumValue words={keywords} git={github}></HumValue>
+                    ) : id === 9 ? (
+                      <PulsePicker words={keywords} git={github}></PulsePicker>
+                    ) : id === 10 ? (
+                      <Promptic words={keywords} git={github}></Promptic>
                     ) : null}
                   </div>
                 </div>
