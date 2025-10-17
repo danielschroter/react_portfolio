@@ -1,7 +1,7 @@
 import React from "react";
 import CTA from "./CTA";
 import "./header.css";
-// import ME from "../../assets/me-5.png";
+import ME from "../../assets/me-5.png";
 
 const Header = () => {
   return (
@@ -21,7 +21,11 @@ const Header = () => {
 
           <div className="me">
             {/* <div className="me-img"></div> */}
-            {/* <img className="me-img" src={ME} alt="me" /> */}
+            <img
+              className="me-img"
+              src={ME}
+              alt="A portrait of Daniel Schroter Thüm"
+            />
           </div>
           <div className="scroll__down-div">
             {/* <a href="#contact" className="scroll__down">
