@@ -1,11 +1,11 @@
 import React from "react";
 import CTA from "./CTA";
 import "./header.css";
-import ME from "../../assets/me-5.png";
+import ME from "../../assets/daniel-schroter-thuem.png";
 
 const Header = () => {
   return (
-    <div>
+    <header>
       <div className="container header__container">
         <h5 className="p-2">Hello I'm</h5>
         <h1 className=" pb-4 text-4xl md:text-4xl tracking-widest  ">
@@ -20,12 +20,7 @@ const Header = () => {
           <div>{/* <HeaderSocials /> */}</div>
 
           <div className="me">
-            {/* <div className="me-img"></div> */}
-            <img
-              className="me-img"
-              src={ME}
-              alt="A portrait of Daniel Schroter Thüm"
-            />
+            <img src={ME} alt="A portrait of Daniel Schroter Thüm" />
           </div>
           <div className="scroll__down-div">
             {/* <a href="#contact" className="scroll__down">
@@ -34,7 +29,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

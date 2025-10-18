@@ -47,38 +47,30 @@ header {
 
 /* ========= ME =========== */
 .me {
-  background: 
-  /* radial-gradient(
-      350px circle at 100px 150px,
-      rgba(0, 0, 0, 0.506),
-      transparent 30%
-    ), */
-     /* radial-gradient(
-      300px circle at 120px 200px,
-      transparent 30%,
-      rgba(16, 16, 16, 0.92)
-    ), */ linear-gradient(
-      transparent 5%,
-      var(--color-bg)
-    ),
-    url(../../assets/me-bewerbung.png);
-  /* mix-blend-mode: lighten; */
-  /* background-blend-mode: multiply; */
-  background-size: contain;
-  background-repeat: no-repeat;
-  min-height: 30rem;
-  min-width: 20rem;
-
-  max-width: 22rem;
-  max-height: 30rem;
+  width: 22rem;
+  height: 30rem;
+  position: relative;
   margin-top: 4rem;
   margin-left: auto;
-  margin-bottom: 0;
   margin-right: auto;
-  /* border: 0.5px solid; */
-  overflow: hidden;
+}
+
+.me::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(transparent, var(--color-bg));
+  pointer-events: none;
+}
+
+.me img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   padding: 2rem 0 0 0;
-  /* position: relative; */
 }
 
 /* ========= Scroll Down =========== */
@@ -114,6 +106,7 @@ header {
 
   .me {
     max-width: 19rem;
+    height: auto;
   }
 }
 
@@ -126,6 +119,7 @@ header {
 
   .me {
     max-width: 14rem;
+    height: auto;
     /*left: calc(50% - 7rem);*/
     /*bottom: 4rem;*/
     padding-top: 1.5rem;
