@@ -30,7 +30,14 @@ const About = () => {
         <div className="about__me">
           <div className="about__me-image">
             {/* <div className="relative w-50 h-50 bg-gray-300 rounded-full filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-4000"></div> */}
-            <img src={ME} alt="Daniel Schroter About" />
+            <img
+              src={ME}
+              alt="Daniel Schroter Thüm About"
+              title="Daniel Schroter Thüm"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
           </div>
         </div>
         <div className="about__content">

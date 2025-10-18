@@ -9,11 +9,12 @@ import { useState } from "react";
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
   return (
-    <nav>
+    <nav aria-label="Main navigation">
       <a
         href="/#"
         onClick={() => setActiveNav("#")}
         className={activeNav === "#" ? "active" : ""}
+        aria-label="Navigate to home section"
       >
         <AiOutlineHome />
       </a>
@@ -21,6 +22,7 @@ const Nav = () => {
         href="#about"
         onClick={() => setActiveNav("#about")}
         className={activeNav === "#about" ? "active" : ""}
+        aria-label="Navigate to about section"
       >
         <AiOutlineUser />
       </a>
@@ -28,6 +30,7 @@ const Nav = () => {
         href="#experience"
         onClick={() => setActiveNav("#experience")}
         className={activeNav === "#experience" ? "active" : ""}
+        aria-label="Navigate to experience section"
       >
         <BiBrain />
       </a>
@@ -35,6 +38,7 @@ const Nav = () => {
         href="#portfolio"
         onClick={() => setActiveNav("#portfolio")}
         className={activeNav === "#portfolio" ? "active" : ""}
+        aria-label="Navigate to portfolio section"
       >
         <BiBookAlt />
       </a>
@@ -42,6 +46,7 @@ const Nav = () => {
         href="#contact"
         onClick={() => setActiveNav("#contact")}
         className={activeNav === "#contact" ? "active" : ""}
+        aria-label="Navigate to contact section"
       >
         <BiMessageSquareDetail />
       </a>

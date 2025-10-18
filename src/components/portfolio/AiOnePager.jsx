@@ -86,7 +86,8 @@ function AiOnePager(props) {
             <img
               className="portfolio__modal-image"
               src={OnePagerScreen}
-              alt=""
+              alt="Screenshot of AI OnePager application interface"
+              loading="lazy"
             />
           </div>
         </div>

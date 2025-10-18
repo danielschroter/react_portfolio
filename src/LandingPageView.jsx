@@ -12,6 +12,9 @@ import Services from "./components/services/Services";
 function LandingPageView() {
   return (
     <>
+      <a href="#about" className="skip-to-content">
+        Skip to content
+      </a>
       <div className="relative inset-0 overflow-hidden isolate">
         <div className="absolute top-7 rounded-full w-96 h-96 bg-slate-200 left-[30vw] filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-4000"></div>
         <div className="absolute top-10 rounded-full w-96 h-96 bg-yellow-600/70 left-[40vw]   filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-2000"></div>
@@ -23,11 +26,13 @@ function LandingPageView() {
 
         <Header />
         <Nav />
-        <About />
-        {/* <Services></Services> */}
-        <Experience />
-        <Portfolio />
-        <Contact />
+        <main>
+          <About />
+          {/* <Services></Services> */}
+          <Experience />
+          <Portfolio />
+          <Contact />
+        </main>
         <Footer />
       </div>
     </>

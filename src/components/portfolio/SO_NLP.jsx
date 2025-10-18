@@ -72,7 +72,11 @@ function SoNLP(props) {
         </p>
 
         <div className="so_nlp_img">
-          <img src={Model_img} alt="so_nlp_img" />
+          <img
+            src={Model_img}
+            alt="NLP model architecture diagram showing LSTM layers"
+            loading="lazy"
+          />
         </div>
       </div>
 
