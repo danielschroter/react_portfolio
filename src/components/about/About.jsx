@@ -51,9 +51,7 @@ const About = () => {
               {/* <div className="about__card_content"> */}
               <FaAward className="about__icon" />
               <h5>Education</h5>
-              <small>
-                Management (B.Sc), Computer Science (B.Sc, soon M.Sc)
-              </small>
+              <small>Management (B.Sc), Computer Science (B.Sc, M.Sc)</small>
               {/* </div> */}
             </article>
 
