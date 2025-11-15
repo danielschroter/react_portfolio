@@ -83,7 +83,7 @@ h1 {
 
 /* almost all components are going to be wrapped in a section tag */
 section {
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 section > h2,
@@ -184,7 +184,7 @@ img {
     width: var(--container-width-md);
   }
   section {
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
 }
 
@@ -193,6 +193,9 @@ img {
 @media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
+  }
+  section {
+    margin-top: 5rem;
   }
   section > h2 {
     margin-bottom: 2rem;
