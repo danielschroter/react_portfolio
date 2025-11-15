@@ -20,8 +20,8 @@ const CONTACT_CARDS = [
 ] as const;
 
 const Contact: React.FC = () => (
-  <section id="contact" className="px-4">
-    <div className="container mx-auto max-w-5xl">
+  <section id="contact" className="relative px-4 pb-20">
+    <div className="container relative mx-auto max-w-5xl">
       <h5 className="text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
         Get in touch
       </h5>

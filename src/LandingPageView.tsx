@@ -16,34 +16,25 @@ const LandingPageView: React.FC = () => (
       Skip to content
     </a>
     <div className="relative inset-0 isolate overflow-hidden">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-7 left-[30vw] h-96 w-96 rounded-full bg-slate-200 filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-4000"
-      ></div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-10 left-[40vw] h-96 w-96 rounded-full bg-yellow-600/70 filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-2000"
-      ></div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-[240vh] left-[90%] h-96 w-96 rounded-full bg-yellow-600/60 filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-2000"
-      ></div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-3/4 left-[10vw] h-96 w-96 rounded-full bg-slate-200/60 filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-4000"
-      ></div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-1/4 left-[20vw] h-96 w-96 rounded-full bg-slate-200 filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-2000"
-      ></div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-2/4 left-[40vw] h-96 w-96 rounded-full bg-slate-200/60 filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-2000"
-      ></div>
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-20 left-1/3 h-96 w-96 rounded-full bg-slate-200 filter blur-3xl opacity-20 sm:opacity-20 animate-blob animation-delay-4000"
-      ></div>
+      {/* Global Seamless Background Layer */}
+      <div className="pointer-events-none fixed inset-0 z-0">
+        {/* Multiple overlapping gradients for continuous effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_80%_at_50%_0%,_var(--color-bg-variant)_0%,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_0%_20%,_rgba(77,181,255,0.12)_0%,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_100%_40%,_var(--color-bg-variant)_0%,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_20%_60%,_rgba(77,181,255,0.10)_0%,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_80%_80%,_var(--color-bg-variant)_0%,_transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_100%,_rgba(77,181,255,0.08)_0%,_transparent_50%)]" />
+        {/* Grain texture overlay */}
+        <div 
+          className="absolute inset-0 opacity-[0.015]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '200px 200px'
+          }}
+        />
+      </div>
 
       <Header />
       <Nav />

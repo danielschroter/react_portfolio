@@ -31,8 +31,8 @@ const MANAGEMENT_SKILLS = [
 ] as const;
 
 const Experience: React.FC = () => (
-  <section id="experience" className="mt-40 px-4">
-    <div className="container mx-auto max-w-6xl">
+  <section id="experience" className="relative mt-40 px-4 pb-20">
+    <div className="container relative mx-auto max-w-6xl">
       <h5 className="text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
         The skills I have
       </h5>
@@ -67,7 +67,7 @@ const Experience: React.FC = () => (
           {MANAGEMENT_SKILLS.map((skill) => (
             <span
               key={skill}
-              className="rounded-full border border-white/30 px-4 py-1 text-sm text-white shadow-sm transition hover:-translate-y-0.5 hover:border-white"
+              className="rounded-full border border-[var(--color-secondary)]/60 px-4 py-1 text-sm text-white shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--color-secondary)]"
             >
               {skill}
             </span>

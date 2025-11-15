@@ -205,27 +205,6 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     ],
   },
   {
-    id: 4,
-    image: IMG4,
-    title: "NLP: StackOverflow tagging",
-    subheading:
-      "Applying Deep Learning to automatically tag StackOverflow questions based on Title & Body text",
-    keywords: [
-      "Natural Language Processing",
-      "Deep Learning",
-      "Python",
-      "Neural Networks",
-      "Bag of Words",
-      "LSTM",
-      "Word Embeddings",
-      "Grid Search",
-    ],
-    demo: "",
-    subtitle:
-      "Automatic Tagging of topics to stackoverflow with deep neural networks",
-    github: "https://github.com/danielschroter/so_nlp",
-  },
-  {
     id: 1,
     image: IMG1,
     title: "Predictive Maintenance @ Bosch production line",
@@ -271,8 +250,6 @@ const renderProjectDetails = (
       return <BaCS git={github} words={keywords} />;
     case 3:
       return <Rasa words={keywords} />;
-    case 4:
-      return <SoNLP words={keywords} git={github} />;
     case 5:
       return <ExpAI words={keywords} git={github} />;
     case 6:
@@ -309,8 +286,8 @@ const Portfolio: React.FC = () => {
   }, [id, hasInteracted]);
 
   return (
-    <section id="portfolio" className="mt-40 px-4">
-      <div className="container mx-auto max-w-6xl">
+    <section id="portfolio" className="relative mt-40 px-4 pb-20">
+      <div className="container relative mx-auto max-w-6xl">
         <h5 className="text-right text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
           My Recent Work
         </h5>
@@ -324,20 +301,20 @@ const Portfolio: React.FC = () => {
           return (
             <React.Fragment key={project.id}>
               <article
-                className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--color-card-border)] p-5 shadow-2xl transition hover:-translate-y-1"
-                style={{ backgroundColor: "rgba(22, 38, 44, 0.85)" }}
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--color-card-border)] bg-[var(--color-card-bg)]/80 p-5 shadow-2xl backdrop-blur transition hover:-translate-y-1"
               >
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[var(--color-secondary)]/15 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-48 w-full rounded-2xl object-cover"
+                  className="relative z-10 h-48 w-full rounded-2xl object-cover"
                   loading="lazy"
                 />
-                <h3 className="mt-4 text-xl font-semibold tracking-wide text-white">
+                <h3 className="relative z-10 mt-4 text-xl font-semibold tracking-wide text-white">
                   {project.title}
                 </h3>
-                <p className="mt-2 text-sm text-white/70">{project.subtitle}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <p className="relative z-10 mt-2 text-sm text-white/70">{project.subtitle}</p>
+                <div className="relative z-10 mt-4 flex flex-wrap gap-2">
                   {project.keywords.slice(0, 3).map((keyword) => (
                     <span
                       key={keyword}
@@ -352,7 +329,7 @@ const Portfolio: React.FC = () => {
                     </span>
                   )}
                 </div>
-                <div className="mt-6 flex flex-wrap gap-3">
+                <div className="relative z-10 mt-6 flex flex-wrap gap-3">
                   {project.demo && (
                     <a
                       href={project.demo}

@@ -24,8 +24,8 @@ const HIGHLIGHTS = [
 ] as const;
 
 const About: React.FC = () => (
-  <section id="about" className="mt-32 px-4">
-    <div className="container mx-auto max-w-6xl">
+  <section id="about" className="relative mt-32 px-4 pb-20">
+    <div className="container relative mx-auto max-w-6xl">
       <h5 className="text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
         Get to know
       </h5>
