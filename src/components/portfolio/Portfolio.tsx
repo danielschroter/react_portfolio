@@ -311,10 +311,10 @@ const Portfolio: React.FC = () => {
   return (
     <section id="portfolio" className="mt-40 px-4">
       <div className="container mx-auto max-w-6xl">
-        <h5 className="text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
+        <h5 className="text-right text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
           My Recent Work
         </h5>
-        <h2 className="mt-2 text-3xl font-light tracking-[0.4em] text-white">
+        <h2 className="mt-2 text-right text-3xl font-light tracking-[0.4em] text-white">
           Personal Projects
         </h2>
 
