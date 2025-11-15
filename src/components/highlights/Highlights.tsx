@@ -41,7 +41,7 @@ const HIGHLIGHT_ITEMS: Highlight[] = [
       </>
     ),
     description:
-      "Developed AI/NLP solutions for 8+ enterprise projects across automotive, manufacturing, pharma, and insurance – leading AI development on automated negotiation agents, multi-agent voice assistants, and advanced RAG for customer support.",
+      "Developed AI/NLP solutions for multiple enterprise projects across automotive, manufacturing, pharma, and insurance – responsible for core AI development on an automated negotiation agent, a real-time multi-agent voice assistant, and advanced RAG for customer support.",
   },
   {
     id: "semeval",
