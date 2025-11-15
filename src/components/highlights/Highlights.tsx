@@ -68,10 +68,10 @@ const HIGHLIGHT_ITEMS: Highlight[] = [
 const Highlights: React.FC = () => (
   <section id="highlights" className="relative mt-40 px-4 pb-20">
     <div className="container relative mx-auto max-w-6xl">
-      <h5 className="text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
+      <h5 className="text-right text-sm uppercase tracking-[0.4em] text-[var(--color-light)]">
         Professional highlights
       </h5>
-      <h2 className="mt-2 text-3xl font-light tracking-[0.4em] text-white">
+      <h2 className="mt-2 text-right text-3xl font-light tracking-[0.4em] text-white">
         Highlights
       </h2>
 
