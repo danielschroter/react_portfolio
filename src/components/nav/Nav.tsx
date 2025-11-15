@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBookAlt, BiBrain, BiMessageSquareDetail } from "react-icons/bi";
 
@@ -12,11 +12,25 @@ const NAV_ITEMS = [
 
 const Nav: React.FC = () => {
   const [active, setActive] = useState("/#");
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show nav after scrolling down 100px
+      setIsVisible(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
-      className="fixed bottom-6 left-1/2 z-40 -translate-x-1/2 rounded-full border border-white/10 bg-white/5 px-5 py-3 shadow-[0_20px_50px_rgba(8,7,16,0.4)] backdrop-blur-xl"
+      className={`fixed bottom-6 left-1/2 z-40 -translate-x-1/2 rounded-full border border-white/10 bg-white/5 px-5 py-3 shadow-[0_20px_50px_rgba(8,7,16,0.4)] backdrop-blur-xl transition-all duration-500 ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+      }`}
       aria-label="Main navigation"
+      aria-hidden={!isVisible}
     >
       <ul className="flex items-center gap-3 text-lg text-white">
         {NAV_ITEMS.map(({ href, icon: Icon, label }) => {

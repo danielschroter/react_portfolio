@@ -30,8 +30,8 @@
   /* --color-card-bg: rgb(23, 31, 33);
   --color-card-border: rgba(37, 49, 54, 1); */
 
-  --color-card-bg: rgba(22, 38, 44, 0.291);
-  --color-card-border: rgba(22, 38, 44, 0.6);
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+  --color-card-border: rgba(255, 255, 255, 0.1);
 
   --transition: all 400ms ease;
 
