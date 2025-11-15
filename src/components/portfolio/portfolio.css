@@ -13,32 +13,55 @@
   position: relative;
   border: 1px solid rgba(22, 38, 44, 0.6);
   transition: var(--transition);
+  overflow: hidden;
 }
 
-/* .portfolio__item::before {
-  background: radial-gradient(
-    800px circle at var(--mouse-x) var(--mouse-y),
-    /* 800px circle at 100px 100px, */
-/* rgba(255, 255, 255, 0.06),
-    transparent 40%
-  );
+.portfolio__item::before {
   border-radius: inherit;
   content: "";
   height: 100%;
   left: 0px;
   position: absolute;
+  transition: background 500ms;
   top: 0px;
   width: 100%;
-} */
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
 
-.portfolio__item:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
+.portfolio__item::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  transition: background 500ms;
+  top: 0px;
+  width: 100%;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1px;
 }
 
 .portfolio__item-image-div {
   border-radius: 1.5rem;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 .portfolio__item-image {
@@ -49,12 +72,16 @@
 
 .portfolio__item h3 {
   margin: 1.2rem 0 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .portfolio__item-cta {
   display: flex;
   gap: 1rem;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .portfolio__modal {

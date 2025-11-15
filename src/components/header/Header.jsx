@@ -12,7 +12,7 @@ const Header = () => {
           <b>DANIEL SCHROTER THÜM</b>
         </h1>
         <h2 className="font-thin">
-          Data Scientist & AI Engineer | Co-Founder at{" "}
+           ML & AI Engineer | Co-Founder at{" "}
           <a
             href="https://promptic.eu"
             target="_blank"

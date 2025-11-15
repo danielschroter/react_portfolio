@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./contact.css";
 import { MdOutlineMail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
 
 const Contact = () => {
+  useEffect(() => {
+    const handleOnMouseMove = (e) => {
+      const cards = document.querySelectorAll(".contact__option");
+      
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      });
+    };
+
+    document.addEventListener("mousemove", handleOnMouseMove);
+    
+    return () => {
+      document.removeEventListener("mousemove", handleOnMouseMove);
+    };
+  }, []);
+
   return (
     <section id="contact">
       <h5 className="text-sm">Get In Touch</h5>
@@ -26,7 +46,7 @@ const Contact = () => {
           <article className="contact__option">
             <BsLinkedin className="contact__option-icon" />
             <h4>LinkedIn</h4>
-            <h5>Daniel Schroter</h5>
+            <h5>Daniel Schroter Thüm</h5>
             <a
               href="https://www.linkedin.com/in/daniel-schroter/"
               target="_blank"

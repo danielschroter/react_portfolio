@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./about.css";
 import { FaAward } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
@@ -10,16 +10,25 @@ import ME from "../../assets/Sizilien.jpeg";
 const About = () => {
   const [viewMore, setViewMore] = useState(false);
 
-  const handleOnMouseMove = (e) => {
-    console.log("e", e);
-    const { currentTarget: target } = e;
-    const rect = target.getBoundingClientRect(),
-      x = e.clientX - rect.left,
-      y = e.clientY - rect.top;
-    console.log("x", x);
-    target.style.setProperty("--mouse-x", `${x}px`);
-    target.style.setProperty("--mouse-y", `${y}px`);
-  };
+  useEffect(() => {
+    const handleOnMouseMove = (e) => {
+      const cards = document.querySelectorAll(".about__card");
+      
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      });
+    };
+
+    document.addEventListener("mousemove", handleOnMouseMove);
+    
+    return () => {
+      document.removeEventListener("mousemove", handleOnMouseMove);
+    };
+  }, []);
 
   return (
     <section id="about">
@@ -44,7 +53,6 @@ const About = () => {
           <div className="about__cards">
             <article
               className="about__card"
-              onMouseMove={(e) => handleOnMouseMove(e)}
             >
               {/* <div className="about__card_border"></div> */}
 
@@ -57,7 +65,6 @@ const About = () => {
 
             <article
               className="about__card"
-              onMouseMove={(e) => handleOnMouseMove(e)}
             >
               {/* <div className="about__card_border"></div> */}
 
@@ -72,7 +79,6 @@ const About = () => {
 
             <article
               className="about__card"
-              onMouseMove={(e) => handleOnMouseMove(e)}
             >
               {/* <div className="about__card_border"></div> */}
 

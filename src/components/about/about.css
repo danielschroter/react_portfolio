@@ -50,59 +50,48 @@
   text-align: center;
   align-items: center;
   padding: 1rem;
+  overflow: hidden;
 }
 
-.about__card:hover::before,
-.about__card:hover > .about__card_border {
-  opacity: 1;
-}
-
-.about__card::before,
-.about__card > about__card_border {
-  opacity: 0;
+.about__card::before {
   border-radius: inherit;
   content: "";
   height: 100%;
   left: 0px;
   position: absolute;
-  transition: opacity 500ms;
+  transition: background 500ms;
   top: 0px;
   width: 100%;
-}
-
-.about__card::before {
   background: radial-gradient(
     400px circle at var(--mouse-x) var(--mouse-y),
     rgba(255, 255, 255, 0.06),
     transparent 40%
   );
-  z-index: 3;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.about__card > .about__card_border {
+.about__card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  transition: background 500ms;
+  top: 0px;
+  width: 100%;
   background: radial-gradient(
-    100px circle at var(--mouse-x) var(--mouse-y),
-    rgba(255, 255, 255, 0.5),
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
     transparent 40%
   );
   z-index: 1;
-}
-
-.about__card > .about__card_content {
-  margin: 1px;
-  background-color: var(--color-card-bg);
-  border-radius: inherit;
-  height: calc(100% - 2px);
-  width: calc(100% - 2px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 4px;
-  position: relative;
-  padding: 1rem;
-  z-index: 2;
+  pointer-events: none;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1px;
 }
 
 /* .about__card:hover {
@@ -115,15 +104,21 @@
   color: var(--color-secondary);
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .about__card h5 {
   font-size: 0.95rem;
+  position: relative;
+  z-index: 2;
 }
 
 .about__card small {
   font-size: 0.7rem;
   color: var(--color-light);
+  position: relative;
+  z-index: 2;
 }
 
 .about__content p {
@@ -138,6 +133,19 @@
 
 .about__span {
   color: var(--color-light);
+}
+
+.about__content a {
+  transition: var(--transition);
+  cursor: pointer !important;
+  position: relative;
+  z-index: 3;
+}
+
+.about__content a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+  cursor: pointer !important;
 }
 
 /* ========== Media Queries (MEDIUM Devices: tablets) ========= */

@@ -104,10 +104,24 @@ section > h2 {
 a {
   color: var(--color-white);
   transition: var(--transition);
+  cursor: pointer;
 }
 
 a:hover {
   color: var(--color-white);
+}
+
+/* Ensure interactive elements always advertise clickability */
+a,
+button,
+[role="button"] {
+  cursor: pointer !important;
+}
+
+a[aria-disabled="true"],
+button:disabled,
+[role="button"][aria-disabled="true"] {
+  cursor: not-allowed !important;
 }
 
 .btn {

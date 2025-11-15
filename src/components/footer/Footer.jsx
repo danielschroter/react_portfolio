@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <a href="/#" className="text-4xl tracking-widest font-thin m-10">
-        Daniel Schroter
+        Daniel Schroter Thüm
       </a>
       <ul className="permalinks">
         <li>

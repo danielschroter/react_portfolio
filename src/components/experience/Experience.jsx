@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./experience.css";
 
 const Experience = () => {
+  useEffect(() => {
+    const handleOnMouseMove = (e) => {
+      const cards = document.querySelectorAll(".experience__container > div");
+      
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      });
+    };
+
+    document.addEventListener("mousemove", handleOnMouseMove);
+    
+    return () => {
+      document.removeEventListener("mousemove", handleOnMouseMove);
+    };
+  }, []);
+
   const mlSkills = [
     "Python",
     "Pytorch",
@@ -42,13 +62,13 @@ const Experience = () => {
         <div className="experience__frontend">
           <h3 className="font-thin text-xl">Technology</h3>
           <div className="experience__content">
-            {mlSkills.map((skill) => (
-              <article className="px-4 py-2 border border-[var(--color-secondary)] rounded-3xl text-sm hover:scale-105 transition">
+            {mlSkills.map((skill, index) => (
+              <article key={index} className="px-4 py-2 border border-[var(--color-secondary)] rounded-3xl text-sm hover:scale-105 transition">
                 {skill}
               </article>
             ))}
-            {webDev.map((skill) => (
-              <article className="px-4 py-2 border border-[var(--color-secondary)] rounded-3xl text-sm hover:scale-105 transition">
+            {webDev.map((skill, index) => (
+              <article key={index} className="px-4 py-2 border border-[var(--color-secondary)] rounded-3xl text-sm hover:scale-105 transition">
                 {skill}
               </article>
             ))}
@@ -57,8 +77,8 @@ const Experience = () => {
         <div className="experience__backend">
           <h3 className="font-thin text-xl">Management</h3>
           <div className="experience__content">
-            {managementSkills.map((skill) => (
-              <article className="px-5 py-2 border border-[var(--color-secondary)] rounded-[30px] text-sm hover:scale-105 transition">
+            {managementSkills.map((skill, index) => (
+              <article key={index} className="px-5 py-2 border border-[var(--color-secondary)] rounded-[30px] text-sm hover:scale-105 transition">
                 {skill}
               </article>
             ))}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import IMG5 from "../../assets/ai_cropped.jpg";
 import AiOnePagerImg from "../../assets/AiOnePager.png";
 import IMG3 from "../../assets/chatbot.jpg";
@@ -11,7 +11,6 @@ import IMG_PROMPTIC from "../../assets/promptic.png";
 import IMG4 from "../../assets/technology.jpg";
 import "./portfolio.css";
 
-import { useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { useParams } from "react-router-dom";
 
@@ -249,6 +248,26 @@ const data = [
 ];
 
 const Portfolio = () => {
+  useEffect(() => {
+    const handleOnMouseMove = (e) => {
+      const cards = document.querySelectorAll(".portfolio__item");
+      
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      });
+    };
+
+    document.addEventListener("mousemove", handleOnMouseMove);
+    
+    return () => {
+      document.removeEventListener("mousemove", handleOnMouseMove);
+    };
+  }, []);
+
   const { id } = useParams();
 
   const [toggleState, setToggleState] = useState(0);
@@ -310,8 +329,8 @@ const Portfolio = () => {
             keywords,
           }) => {
             return (
-              <>
-                <div key={id} className="portfolio__item">
+              <React.Fragment key={id}>
+                <div className="portfolio__item">
                   <div className="portfolio__item-image-div">
                     <img
                       className="portfolio__item-image"
@@ -389,7 +408,7 @@ const Portfolio = () => {
                     ) : null}
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             );
           }
         )}

@@ -11,24 +11,65 @@
   border-radius: 2rem;
   border: 1px solid var(--color-card-border);
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
 
-.experience__container > div:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;
+.experience__container > div::before {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  transition: background 500ms;
+  top: 0px;
+  width: 100%;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.experience__container > div::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  transition: background 500ms;
+  top: 0px;
+  width: 100%;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1px;
 }
 
 .experience__container > div h3 {
   text-align: center;
   margin-bottom: 2rem;
   color: var(--color-primary);
+  position: relative;
+  z-index: 2;
 }
 .experience__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  position: relative;
+  z-index: 2;
 }
 
 .experience__details {

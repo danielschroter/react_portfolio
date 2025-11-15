@@ -21,22 +21,70 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.contact__option:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
+.contact__option::before {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  transition: background 500ms;
+  top: 0px;
+  width: 100%;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact__option::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  transition: background 500ms;
+  top: 0px;
+  width: 100%;
+  background: radial-gradient(
+    400px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.4),
+    transparent 40%
+  );
+  z-index: 1;
+  pointer-events: none;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1px;
 }
 
 .contact__option-icon {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact__option h4,
+.contact__option h5 {
+  position: relative;
+  z-index: 2;
 }
 
 .contact__option a {
   margin-top: 0.7rem;
   display: inline-block;
   font-size: small;
+  position: relative;
+  z-index: 2;
 }
 
 /* ========== FORM =========== */
