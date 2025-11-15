@@ -88,17 +88,15 @@ const About = () => {
           </div>
           <div className="text-sm tracking-wide mt-10">
             <div>
-              I am an entrepreneurial thinking computer scientist with a strong
-              background in business administration.
+              I'm a Data Scientist & AI Engineer specializing in Natural Language Processing and Generative AI. Currently co-founding <a href="https://promptic.eu" target="_blank" rel="noopener noreferrer" className="font-bold">Promptic</a>, where we help businesses scale GenAI by automated and metric-driven prompt optimization.
             </div>
 
             <div className="mt-4">
-              AI can deliver great value. Especially in the areas of Natural
-              Language Processing and Augmented Reality. Nevertheless it is
-              crucial to connect with customers & users to meet their demands.
-              By making black models explainable (explainableAI) we will be able
-              to exploit the full potential of these technologies and deliver
-              great value to our society!
+              I work as an AI Engineer at <strong>statworx</strong>, building enterprise NLP and GenAI solutions for clients. Beyond my work there, I've also contributed to academic NLP research, winning <strong>SemEval-2023 Task 4</strong> and publishing at ACL 2023.
+            </div>
+
+            <div className="mt-4">
+              With a background in both Computer Science (M.Sc) and Business Administration (B.Sc), I focus on building AI systems that deliver measurable value while remaining explainable and user-centered.
             </div>
 
             {/* <span className="about__span">
