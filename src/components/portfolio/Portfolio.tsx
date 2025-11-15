@@ -301,62 +301,77 @@ const Portfolio: React.FC = () => {
           return (
             <React.Fragment key={project.id}>
               <article
-                className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--color-card-border)] bg-[var(--color-card-bg)]/80 p-5 shadow-2xl backdrop-blur transition hover:-translate-y-1"
+                className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-[var(--color-card-border)] bg-[var(--color-card-bg)]/80 shadow-2xl backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(77,181,255,0.15)]"
               >
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[var(--color-secondary)]/15 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="relative z-10 h-48 w-full rounded-2xl object-cover"
-                  loading="lazy"
-                />
-                <h3 className="relative z-10 mt-4 text-xl font-semibold tracking-wide text-white">
-                  {project.title}
-                </h3>
-                <p className="relative z-10 mt-2 text-sm text-white/70">{project.subtitle}</p>
-                <div className="relative z-10 mt-4 flex flex-wrap gap-2">
-                  {project.keywords.slice(0, 3).map((keyword) => (
-                    <span
-                      key={keyword}
-                      className="rounded-full border border-white/30 px-3 py-1 text-xs text-white/80"
-                    >
-                      {keyword}
-                    </span>
-                  ))}
-                  {project.keywords.length > 3 && (
-                    <span className="rounded-full border border-white/30 px-3 py-1 text-xs text-white/80">
-                      +{project.keywords.length - 3} more
-                    </span>
-                  )}
+                
+                {/* Image with overlay on hover */}
+                <div className="relative z-10 overflow-hidden rounded-2xl">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </div>
-                <div className="relative z-10 mt-6 flex flex-wrap gap-3">
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
+
+                {/* Content */}
+                <div className="relative z-10 flex flex-1 flex-col p-5">
+                  <h3 className="text-xl font-semibold tracking-wide text-white">
+                    {project.title}
+                  </h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">
+                    {project.subtitle}
+                  </p>
+                  
+                  {/* Keywords */}
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.keywords.slice(0, 3).map((keyword) => (
+                      <span
+                        key={keyword}
+                        className="rounded-full border border-[var(--color-secondary)]/40 bg-[var(--color-bg-variant)]/50 px-3 py-1 text-xs text-white/80 transition hover:border-[var(--color-secondary)] hover:text-white"
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                    {project.keywords.length > 3 && (
+                      <span className="rounded-full border border-white/20 bg-[var(--color-bg-variant)]/50 px-3 py-1 text-xs text-white/60">
+                        +{project.keywords.length - 3}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Actions */}
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 rounded-lg border border-[var(--color-secondary)] bg-[var(--color-secondary)]/20 px-4 py-2 text-center text-sm font-medium text-white transition hover:border-[var(--color-secondary-vibrant)] hover:bg-[var(--color-secondary)]/40"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg border border-white/30 px-4 py-2 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
+                      >
+                        GitHub
+                      </a>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() => handleOpen(project.id)}
                       className="rounded-lg border border-white/30 px-4 py-2 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
                     >
-                      Demo
-                    </a>
-                  )}
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-lg border border-white/30 px-4 py-2 text-sm font-medium text-white transition hover:border-white hover:bg-white/10"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                  <button
-                    type="button"
-                    onClick={() => handleOpen(project.id)}
-                    className="rounded-lg border border-[var(--color-secondary)] px-4 py-2 text-sm font-medium text-white transition hover:bg-white/10"
-                  >
-                    Read More
-                  </button>
+                      Details
+                    </button>
+                  </div>
                 </div>
               </article>
 
