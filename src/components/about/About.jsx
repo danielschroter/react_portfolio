@@ -31,7 +31,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about">
+    <section id="about" className="mt-[20vh]">
       <h5 className="text-sm">Get to know</h5>
       <h2 className="text-2xl tracking-widest font-thin">About Me</h2>
 

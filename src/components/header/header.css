@@ -1,5 +1,5 @@
 header {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* padding-top: 7rem; */
   /* overflow: hidden; */
 }
@@ -92,16 +92,16 @@ header {
 /* ========== Media Queries (MEDIUM Devices: tablets) ========= */
 
 @media screen and (max-width: 1024px) {
-  header {
-    height: 100vh;
-  }
+  /* header {
+      height: 100vh;
+    } */
 }
 
 /* ========== Media Queries (Small Devices: tablets) ========= */
 
 @media screen and (max-width: 600px) {
   header {
-    height: 100vh;
+    /* height: 100vh; */
   }
 
   .me {
@@ -113,9 +113,9 @@ header {
 /* ========== Media Queries (Small Devices: tablets) ========= */
 
 @media screen and (max-width: 376px) {
-  header {
+  /* header {
     min-height: 130vh;
-  }
+  } */
 
   .me {
     max-width: 14rem;

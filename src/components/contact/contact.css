@@ -11,6 +11,7 @@
 
 .contact__option {
   background: var(--color-card-bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(15px);
   padding: 1.2rem;
   border-radius: 1.2rem;
